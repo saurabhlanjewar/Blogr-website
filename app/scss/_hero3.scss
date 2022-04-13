@@ -1,0 +1,51 @@
+.hero3 {
+  padding: 13rem 0;
+  overflow: hidden;
+  @include breakpoints-down(medium) {
+    padding: 0;
+  }
+
+  .layout3 {
+    display: flex;
+    position: relative;
+
+    @include breakpoints-down(medium) {
+      display: initial;
+      text-align: center;
+    }
+  }
+
+  &__layout3-img {
+    position: absolute;
+    left: -18.3rem;
+    top: -13rem;
+
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+  }
+
+  &__layout3-img-mob {
+    margin-left: -4.3rem;
+
+    @include breakpoints-up(medium) {
+      margin-left: 0;
+    }
+
+    @include breakpoints-up(large) {
+      display: none;
+    }
+  }
+
+  &__layout3-text {
+    width: 47%;
+    margin-left: 51%;
+    padding-right: 10rem;
+
+    @include breakpoints-down(medium) {
+      width: 100%;
+      margin: auto;
+      padding: 2rem;
+    }
+  }
+}

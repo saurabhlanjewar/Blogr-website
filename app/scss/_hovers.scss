@@ -1,0 +1,36 @@
+.hover {
+  .arrow-transform {
+    transform: rotate(180deg);
+  }
+}
+
+.span-hover {
+  margin-left: -2rem;
+  position: absolute;
+  background-color: $White;
+  padding: 1.5rem;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 0.8rem;
+  a {
+    display: block;
+    color: $veryDarkBlackBlue;
+    font-size: 13px;
+    font-weight: 300;
+    transition: all 200ms ease-in;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  visibility: hidden;
+}
+
+.open-hover {
+  visibility: visible;
+}

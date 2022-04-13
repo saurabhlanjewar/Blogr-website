@@ -1,0 +1,92 @@
+.img-phone {
+  position: relative;
+  // border: 1px solid pink;
+  text-align: center;
+  .phone-img {
+    position: absolute;
+    z-index: 3;
+    margin-left: -37.9rem;
+    margin-top: -4.3rem;
+
+    @include breakpoints-down(medium) {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoints-down(small) {
+      width: 100%;
+    }
+  }
+}
+
+.hero2 {
+  position: relative;
+  overflow: hidden;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+  margin-bottom: 8rem;
+  background-image: linear-gradient(
+    to right,
+    $veryDarkGrayBlue,
+    $veryDarkDesaturatedBlue
+  );
+
+  @include breakpoints-down(medium) {
+    margin-top: -13rem;
+    background-image: linear-gradient(
+      to bottom,
+      $veryDarkGrayBlue,
+      $veryDarkDesaturatedBlue
+    );
+  }
+
+  &__layout2 {
+    padding: 2rem 0rem;
+  }
+  .img-circle {
+    position: absolute;
+    left: -13.5rem;
+    top: -33rem;
+
+    @include breakpoints-down(medium) {
+      width: 159%;
+      top: -225px;
+      left: -100px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding: 2rem 2.3rem 0rem 2rem;
+    width: 55%;
+    margin-left: 50%;
+    z-index: 6;
+
+    @include breakpoints-down(medium) {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+      margin-top: 8rem;
+    }
+    h2 {
+      color: $White;
+      @include breakpoints-down(medium) {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      color: $White;
+      letter-spacing: 1px;
+      word-spacing: 2px;
+      font-weight: 300;
+
+      @include breakpoints-down(medium) {
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

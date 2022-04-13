@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: $veryDarkGrayishBlue;
+  line-height: 1.6;
+  font-weight: 300;
+  // overflow: hidden;
+  min-height: 300vh;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: $White;
+  font-size: 13px;
+}
+
+h1 {
+  color: $White;
+  font-size: 3.5rem;
+
+  @include breakpoints-down(medium) {
+    font-size: 2.2rem;
+  }
+}
+
+h2 {
+  color: $veryDarkBlue;
+  font-size: 2rem;
+  word-spacing: 2px;
+
+  @include breakpoints-down(medium) {
+    font-size: 1.5rem;
+    font-weight: 300;
+    word-spacing: 1px;
+  }
+}
+
+h3 {
+  color: $veryDarkBlue;
+  font-size: 1.5rem;
+  word-spacing: 3px;
+  margin-bottom: 2rem;
+
+  @include breakpoints-down(medium) {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+}
+
+h4 {
+  color: $White;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: $veryDarkGrayishBlue;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+
+  @include breakpoints-down(small) {
+    font-size: 15px;
+  }
+}
+
+button,
+.button,
+.buttons {
+  padding: 0.8rem 1.6rem;
+  background-color: $White;
+  color: $lightRed;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-weight: bold;
+  &:hover {
+    color: $White;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.button2 {
+  border: 2px solid $White;
+  color: $White;
+  background-color: transparent;
+  &:hover {
+    background-color: $White;
+    color: $lightRed;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+
+  &__all {
+    padding: 3.5rem 1.5rem;
+    @include breakpoints-up(large) {
+      padding: 3.5rem 10rem;
+    }
+  }
+  &__sides {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.desktop-hide {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+.mobile-hide {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}

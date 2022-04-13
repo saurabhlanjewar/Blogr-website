@@ -1,0 +1,50 @@
+.footer {
+  background-color: $veryDarkBlackBlue;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 10rem;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+  width: 100%;
+
+  @include breakpoints-down(small) {
+    text-align: center;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  &__logo {
+    @include breakpoints-down(small) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__links {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 10px;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    a {
+      font-size: 15px;
+      color: $grayishBlue;
+      display: block;
+      margin-bottom: 13px;
+
+      &:hover {
+        text-decoration: underline $White;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

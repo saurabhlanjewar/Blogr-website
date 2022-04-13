@@ -1,0 +1,119 @@
+.header {
+  background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+  position: relative;
+  border-bottom-left-radius: 70px;
+  z-index: 2;
+  overflow: hidden;
+  @include breakpoints-down(medium) {
+    background-image: linear-gradient(to bottom, $veryLightRed, $lightRed);
+  }
+  .bg-img-container {
+    margin-top: -88rem;
+    margin-right: -26rem;
+    margin-left: -39.7rem;
+    position: absolute;
+    z-index: -1;
+    float: initial;
+
+    @include breakpoints-down(medium) {
+      margin-top: 0rem;
+      margin-right: 0rem;
+      margin-left: 0rem;
+
+      .bg-img {
+        width: 345%;
+        background-size: cover;
+        margin-top: -15rem;
+        margin-left: -18rem;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 6rem;
+    position: static;
+    z-index: 2;
+    overflow: visible;
+  }
+
+  &__logo {
+    img {
+      width: 85%;
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 8px;
+
+    span {
+      margin-right: 1rem;
+      font-weight: bold;
+
+      .arrow {
+        margin-left: 5px;
+      }
+    }
+
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    cursor: pointer;
+    @include breakpoints-up(large) {
+      display: none;
+    }
+
+    .close {
+      display: none;
+    }
+  }
+
+  .toggle-burger {
+    .open {
+      visibility: hidden;
+    }
+    .close {
+      display: initial;
+    }
+  }
+
+  &__log-in {
+    margin-left: auto;
+  }
+
+  &__body {
+    text-align: center;
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $White;
+      margin-bottom: 2rem;
+
+      @include breakpoints-down(medium) {
+        margin-bottom: 2.3rem;
+      }
+    }
+
+    .header__body-btns {
+      margin-bottom: 4rem;
+
+      @include breakpoints-down(small) {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}
